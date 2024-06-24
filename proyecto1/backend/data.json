@@ -1,0 +1,36 @@
+[
+    {
+        "nombre":"TRK 502X",
+        "marca":"Benelli",
+        "modelo":"2025",
+        "precio":35900000,
+        "imagen":""
+    },
+    {
+        "nombre":"MT Tracer GT 09",
+        "marca":"Yamaha",
+        "modelo":"2024",
+        "precio":72000000,
+        "imagen":""
+    },
+    {
+        "nombre":"Teneré 700",
+        "marca":"Yamaha",
+        "modelo":"2024",
+        "precio":70000000,
+        "imagen":""
+    },
+    {
+        "nombre":"V-Strom 650XT",
+        "marca":"Susuki",
+        "modelo":"2025",
+        "precio":48209000,
+        "imagen":""
+    },    {
+        "nombre":"Versys 650",
+        "marca":"Kawasaky",
+        "modelo":"2023",
+        "precio":52900000,
+        "imagen":""
+    }
+]
