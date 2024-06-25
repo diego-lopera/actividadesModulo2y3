@@ -9,6 +9,8 @@ const port  = process.env.PORT;
 
 connectionDB();
 
+app.use(express.json());
+
 app.use('/', productsRouter);
 
 // app.get('/',(req, res)=>{
