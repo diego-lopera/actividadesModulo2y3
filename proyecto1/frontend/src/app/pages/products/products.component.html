@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="text-center text-uppercase">Nuestros productos</h2>
+    <div class="container my-5">
+      <div class="row row-gap-5" id="productsContainer">
+  
+        @for(product of allProducts; track $index){
+          <div class="col  contenedorProducto">
+            <div class="card miTarjeta border-black text-center" style="width: 18rem; height: 25rem;">
+              <h5 class="card-title text-uppercase">{{product.nombre}}</h5>
+              <img src="{{product.imagen}}" alt="...">
+              <div class="card-body">
+                <p class="card-text fs-1">$ {{product.precio}}</p>
+              </div>
+            </div>
+          </div>
+        }
+        
+      </div>
+    </div>

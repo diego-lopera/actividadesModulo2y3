@@ -1,0 +1,12 @@
+img {
+    width: 100%;
+}
+
+h2 {
+    font-size: large;
+    text-align: center;
+    margin: 10px;
+    background: rgb(243, 239, 239);
+    border-radius: 20px;
+    padding: 10px;
+}

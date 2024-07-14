@@ -1,0 +1,90 @@
+<h2 class="text-center text-uppercase">Bienvenido ADMINISTRADOR de MotorGeek</h2>
+
+<main class="container mt-5 border border-black rounded-3 my-5">
+    <h2>Productos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider" id="miTabla">
+
+            @for(product of allProducts; track $index){
+                <tr>
+                    <td>{{product.nombre}}</td>
+                    <td>{{product.marca}}</td>
+                    <td>{{product.modelo}}</td>
+                    <td class="imgAdmin"><img src="{{product.imagen}}" alt=""></td>
+                    <td>${{product.precio}}</td>
+                    <td class="acciones">
+                        <button type="button" class="btn btn-info mx-3" (click)="getIdProduct(product._id)">
+                            <i class="bi bi-pencil-square"></i>
+                            Editar
+                        </button>
+    
+                        <button type="button" class="btn btn-danger" (click)="deleteProduct(product._id)">
+                            <i class="bi bi-trash"></i>
+                            Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        
+        </tbody>
+    </table>
+</main>
+
+<div class="container my-5">
+    <button type="button" class="btn btn-info" (click)="toggleForm()">
+        <i class="bi bi-plus-square"></i>
+        Agregar un nuevo producto
+    </button>
+</div>
+
+<div class="container">
+
+    @if(showForm){
+    <h3>{{ editMode ? 'Modificar Producto' : 'Crear Producto' }}</h3>
+    <form class="py-5 col-lg-6">
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="nombre" />
+        </div>
+        <div class="mb-3">
+            <label for="inputImagen" class="form-label">Imagen</label>
+            <input type="text" class="form-control" name="imagen" [(ngModel)]="imagen" />
+        </div>
+        <div class="mb-3">
+            <label for="inputPrecio" class="form-label">Precio</label>
+            <input type="number" class="form-control" name="precio" [(ngModel)]="precio" />
+        </div>
+        <div class="mb-3">
+            <label for="inputImagen" class="form-label">Marca</label>
+            <input type="text" class="form-control" name="marca" [(ngModel)]="marca" />
+        </div>
+        <div class="mb-3">
+            <label for="inputImagen" class="form-label">Modelo</label>
+            <input type="text" class="form-control" name="modelo" [(ngModel)]="modelo" />
+        </div>
+
+        <button (click)="editMode ? putProduct() : postProducts()" type="button"
+            class="btn btn-primary bg-my-color col-12">
+            {{ editMode ? 'Modificar Producto' : 'Crear Producto' }}
+        </button>
+        <button (click)="toggleForm()" type="button" class="btn btn-danger bg-my-color col-12 mt-3">
+            Cerrar
+        </button>
+    </form>
+    }
+</div>
+
+
+<!-- <div class="container my-5">
+    <app-post-products></app-post-products>
+</div> -->
