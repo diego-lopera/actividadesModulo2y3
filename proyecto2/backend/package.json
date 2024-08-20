@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Proyecto 2 Bootcamp BIT WEB Full Stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/  app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "type": "module",
+  "author": "Diego Lopera",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
